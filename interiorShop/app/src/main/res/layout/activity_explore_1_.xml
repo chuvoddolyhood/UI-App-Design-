@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Explore_1_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/windowBackground">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/explore_imv_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:id="@+id/explore_imv_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_toStartOf="@+id/explore_imv_menu"
+                    android:layout_toLeftOf="@+id/explore_imv_menu"
+                    android:src="@drawable/ic_bag" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/explore_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginTop="0dp"
+        android:text="Explorer"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"/>
+
+    <RelativeLayout
+        android:id="@+id/explore_list_iconProduct"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/explore_tv_title">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/explore_list_iconProduct">
+
+        <RelativeLayout
+            android:id="@+id/explore_visibleProductSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/explore_tv_numberOfProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:text="120 products"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/explore_imv_dashView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_dash_view" />
+
+            <ImageView
+                android:id="@+id/explore_imv_gridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_toStartOf="@+id/explore_imv_dashView"
+                android:layout_toLeftOf="@+id/explore_imv_dashView"
+                android:src="@drawable/ic_grid_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_toStartOf="@+id/explore_imv_gridView"
+                android:layout_toLeftOf="@+id/explore_imv_gridView"
+                android:text="Popular"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/explore_container_productList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/explore_visibleProductSetting">
+
+            <LinearLayout
+                android:id="@+id/explore_container_productList_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/explore_container_product_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/explore_img_product_1"
+                        android:layout_width="147dp"
+                        android:layout_height="142dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cabinet_1" />
+
+                    <TextView
+                        android:id="@+id/explore_tv_titleProduct_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cabinet Bathroom"
+                        android:layout_below="@+id/explore_img_product_1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="520$"
+                        android:layout_below="@+id/explore_tv_titleProduct_1"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/explore_container_product_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/explore_img_product_2"
+                        android:layout_width="147dp"
+                        android:layout_height="142dp"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lavabo_1" />
+
+                    <TextView
+                        android:id="@+id/explore_tv_titleProduct_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lavabo bathroom luxury"
+                        android:layout_below="@+id/explore_img_product_2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1030$"
+                        android:layout_below="@+id/explore_tv_titleProduct_2"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/explore_container_productList_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/explore_container_product_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/explore_img_product_3"
+                        android:layout_width="147dp"
+                        android:layout_height="142dp"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chair_1" />
+
+                    <TextView
+                        android:id="@+id/explore_tv_titleProduct_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fabric Chair"
+                        android:layout_below="@+id/explore_img_product_3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1250$"
+                        android:layout_below="@+id/explore_tv_titleProduct_3"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/explore_container_product_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/explore_img_product_4"
+                        android:layout_width="147dp"
+                        android:layout_height="142dp"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/diningtableandchairs" />
+
+                    <TextView
+                        android:id="@+id/explore_tv_titleProduct_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dining Table And Chairs"
+                        android:layout_below="@+id/explore_img_product_4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15000$"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/explore_tv_titleProduct_4"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
