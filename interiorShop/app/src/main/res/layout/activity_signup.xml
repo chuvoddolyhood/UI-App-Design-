@@ -7,14 +7,14 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/login_tv_signin"
+        android:id="@+id/signup_tv_lognin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="344dp"
         android:layout_marginLeft="344dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Sign up"
+        android:text="Log in"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/roboto_black"
-        android:text="Welcome back!"
+        android:text="Create account"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,71 +42,53 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="0dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Log back into your account"
+        android:text="Sign up and start shopping"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_tv_welcome" />
 
-    <EditText
-        android:id="@+id/login_edt_Email"
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/signup_edt_Email"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="55dp"
-        android:ems="10"
+        android:layout_marginTop="65dp"
         android:fontFamily="@font/roboto_medium"
         android:hint="Your Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/black"
+        app:met_baseColor="@color/black"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_textColor="@color/black"
         android:letterSpacing="-0.02"
         android:textSize="17dp"
+        android:ems="10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_tv_welcomeScript" />
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_welcomeScript"
+        app:met_floatingLabel="highlight" />
 
-    <EditText
-        android:id="@+id/login_edt_password"
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/signup_edt_password"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:textColorHint="@color/black"
+        android:fontFamily="@font/roboto_medium"
         android:hint="Password"
+        android:inputType="textPassword"
         android:letterSpacing="-0.02"
         android:textSize="17dp"
-        android:fontFamily="@font/roboto_medium"
-        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_edt_Email" />
-
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/login_switch_remember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="0dp"
-        android:thumb="@drawable/thumbswitch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_edt_password"
-        app:track="@drawable/custom_track" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="13dp"
-        android:text="Forgot?"
-        android:textSize="13sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/roboto_medium"
-        app:layout_constraintStart_toEndOf="@+id/login_switch_remember"
-        app:layout_constraintTop_toBottomOf="@+id/login_edt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_edt_Email"
+        app:met_baseColor="@color/black"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn_login"
@@ -114,36 +96,50 @@
         android:layout_height="45dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/custom_button"
-        android:text="Log in"
         android:fontFamily="@font/roboto_medium"
-        android:textColor="@color/black"
+        android:text="Log in"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_edt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_edt_password" />
 
-    <ImageView
-        android:id="@+id/login_imv_background"
-        android:layout_width="412dp"
-        android:layout_height="412dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn_loginwithFB"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button_2"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Continue with Facebook"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/loginimg" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_login" />
 
     <TextView
         android:id="@+id/login_tv_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="13dp"
-        android:text="Remember"
-        android:textSize="13sp"
-        android:textColor="@color/black"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto_medium"
-        app:layout_constraintStart_toEndOf="@+id/login_switch_remember"
-        app:layout_constraintTop_toBottomOf="@+id/login_edt_password" />
+        android:text="@string/policy_signup"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_loginwithFB" />
 
+    <ImageView
+        android:id="@+id/login_imv_background"
+        android:layout_width="412dp"
+        android:layout_height="262dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/signup" />
 </androidx.constraintlayout.widget.ConstraintLayout>
